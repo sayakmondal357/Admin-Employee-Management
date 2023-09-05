@@ -1,0 +1,11 @@
+﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="fw-bold fs-1">Welcome</h1>
+	<a type="submit" asp-controller="AddEmployee" asp-action="Add" class="btn btn-primary m-2 fs-5">Add Single Employee</a>
+	<a type="submit" asp-controller="InsertMultipleEmployees" asp-action="InsertMultipleEmployees" class="btn btn-primary m-2 fs-5">Add Multiple Employees</a>
+	<a type="submit" asp-controller="ViewEmployee" asp-action="Details" class="btn btn-primary m-2 fs-5">View All Employees</a>
+</div>

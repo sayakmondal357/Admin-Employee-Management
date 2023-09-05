@@ -1,0 +1,74 @@
+﻿﻿@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Add Multiple Employees";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="~/css/Style.css" />
+	<title>Add More Employees</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 mt-1">
+				<h4>Insert Multiple Employees</h4>
+			</div>
+			<div class="col-xl-6">
+				<div class="float-end mt-1">
+					<input type="button" value="Add More" class="btn btn-primary" id="addMoreBtn">
+				</div>
+			</div>
+
+			<div class="col-xl-12">
+				<form action="/InsertMultipleEmployees/InsertMultipleEmployees" method="post" class="MultipleRecord">
+					<div class="row duplicate-row">
+						<div class="col-xl-2">
+							<label for="Name">Name</label>
+							<input type="text" name="Name" class="form-control mt-2">
+						</div>
+						<div class="col-xl-2">
+							<label for="Email">Email</label>
+							<input type="email" name="Email" class="form-control mt-2" aria-describedby="emailHelp">
+						</div>
+						<div class="col-xl-2">
+							<label for="Mobile">Mobile</label>
+							<input type="text" name="Mobile" class="form-control mt-2">
+						</div>
+						<div class="col-xl-2">
+							<label for="Department_Id">Department_Name</label>
+							<select name="Department_Id" class="form-control mt-2" asp-items="ViewBag.Departments" aria-label="Default select example mt-2">
+								<option value="" style="font-size:small">--- Select ---</option>
+							</select>
+						</div>
+						<div class="col-xl-2">
+							<span>Status</span><br>
+							<input class="form-check-input mt-3" type="checkbox" name="Status" value="true">
+							<label name="Status" class="form-check-label mt-2">
+								Active
+							</label>
+						</div>
+						<div class="col-xl-2">
+							<input type="button" value="Delete" class="btn btn-danger btn-remove mt-2">
+						</div>
+					</div>
+					<div class="text-center mt-4">
+						<button type="submit" class="btn btn-success" id="submitBtn">Submit</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/js/script.js"></script>
+</body>
+
+</html>

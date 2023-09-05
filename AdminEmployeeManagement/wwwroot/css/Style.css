@@ -1,0 +1,14 @@
+﻿.container {
+	margin-top: 50px;
+}
+
+.duplicate-row {
+	margin-top: 40px;
+	position: relative;
+}
+
+.duplicate-row .btn-remove {
+	position: absolute;
+	right: 0;
+	top: 30px;
+}
